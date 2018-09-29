@@ -20,7 +20,6 @@ public class FighterStrike : MonoBehaviour
 	// atk = numero do ataque utilizado, perfection: 0 = miss, 1 = bad, 2 = good, 3 = perfect
 	{
         //Calcula dano do ataque e aplica no adversario
-        Debug.Log("Chegou");
 
         int atkDamage;
 		atkDamage = baseDamage * perfection / 3;

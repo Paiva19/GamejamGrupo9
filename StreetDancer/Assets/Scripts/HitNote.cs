@@ -10,13 +10,15 @@ public class HitNote : MonoBehaviour
     public GameObject badArea;
 
     public GameObject player;
+
+    //public float distance;
 	
     public List<KeyCode> keyCodes;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -54,8 +56,15 @@ public class HitNote : MonoBehaviour
 			else
 			{
                 player.GetComponent<FighterStrike>().Strike(0);
-                //Debug.Log("YOU SUCK");
-			}
+                RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector2.right, 7f);
+                if (rayHit.collider != null)
+                {
+                    Debug.Log(rayHit.distance);
+                    Debug.Log(rayHit.collider.gameObject.name);
+                    Destroy(rayHit.collider.gameObject);
+                };
+                Debug.Log("YOU SUCK");
+            }
 		}
 	}
 }
