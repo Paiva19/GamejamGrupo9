@@ -9,7 +9,6 @@ public class RythmBar : MonoBehaviour {
 	public float noteSpeed = 4; // velocidde que a nota vai em direcao da caixa de hit da nota
 	public GameObject newNota; // objeto nota 
 	public float notePosition = 9;
-	public KeyCode playNote; // Tecla para tocar alguma nota
 
 	private float deltaTime; // tempo entre a ultima nota gerada e tempo atual
 

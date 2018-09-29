@@ -7,8 +7,6 @@ public class FighterLife : MonoBehaviour {
 
     public int fullLife = 100;
     private int life;
-    public int fisicalDamage;
-    public int musicalDamage;
 
     public Slider lifeBar;
 
