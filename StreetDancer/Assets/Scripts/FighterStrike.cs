@@ -7,9 +7,10 @@ using UnityEngine;
 public class FighterStrike : MonoBehaviour
 {
 	public int baseDamage; //Dano base que o golpe causa
+    public bool alive = true;
 	public List<KeyValuePair<int,int>> comboFlow = new List<KeyValuePair<int, int>>();
 	public GameObject targetPlayer;
-    public bool alive = true;
+    public GameObject hitAccuracy;
 	// Use this for initialization
 	void Start () {
 		comboFlow.Clear();
@@ -38,10 +39,12 @@ public class FighterStrike : MonoBehaviour
                 {
                     comboFlow.Clear();
                 }
+                hitAccuracy.GetComponent<AccuracyFade>().ChangeImage(perfection);
             }
             else
             {
                 atkDamage = FinishComboFlow();
+                hitAccuracy.GetComponent<AccuracyFade>().ChangeImage(4);
             }
             targetPlayer.GetComponent<FighterLife>().getDamaged(atkDamage);
         }   

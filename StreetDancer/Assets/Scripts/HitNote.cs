@@ -55,10 +55,10 @@ public class HitNote : MonoBehaviour
 			}
 			else
 			{
-                player.GetComponent<FighterStrike>().Strike(hitKey, 0);
                 RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector2.right, 7f);
                 if (rayHit.collider != null)
                 {
+                    player.GetComponent<FighterStrike>().Strike(hitKey, 0);
                     Destroy(rayHit.collider.gameObject);
                 };
                 //Debug.Log("YOU SUCK");
