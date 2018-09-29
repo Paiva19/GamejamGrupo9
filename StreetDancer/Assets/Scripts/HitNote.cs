@@ -6,6 +6,10 @@ public class HitNote : MonoBehaviour
 {
 
 	public GameObject perfectArea;
+
+	public GameObject goodArea;
+
+	public GameObject badArea;
 	
 	// Use this for initialization
 	void Start () {
@@ -18,9 +22,22 @@ public class HitNote : MonoBehaviour
 		{
 			if (perfectArea.GetComponent<HitArea>().hasNoteInside)
 			{
-				
-				Debug.Log("Apertei alguma coisa");
+				Debug.Log("PERFECT");
 				Destroy(perfectArea.GetComponent<HitArea>().note);
+			}
+			else if (goodArea.GetComponent<HitArea>().hasNoteInside)
+			{
+				Debug.Log("GOOD");
+				Destroy(perfectArea.GetComponent<HitArea>().note);
+			}
+			else if (badArea.GetComponent<HitArea>().hasNoteInside)
+			{
+				Debug.Log("BAD");
+				Destroy(badArea.GetComponent<HitArea>().note);
+			}
+			else
+			{
+				Debug.Log("YOU SUCK");
 			}
 		}
 	}
