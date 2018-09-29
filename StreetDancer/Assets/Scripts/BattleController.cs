@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BattleController : MonoBehaviour {
@@ -24,6 +25,13 @@ public class BattleController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (p1Wins > 1 || p2Wins > 1)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
 		if (p1Wins > 1)
         {
             player1.GetComponent<FighterLife>().enabled = false;
@@ -44,6 +52,8 @@ public class BattleController : MonoBehaviour {
             winner.color = Color.white;
             //Debug.Log("p2 Wins");
         }
+
+ 
 	}
 
     public void Win(GameObject winningPlayer)

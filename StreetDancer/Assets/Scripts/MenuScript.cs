@@ -4,10 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
+    private void Start()
+    {
+        SceneManager.UnloadSceneAsync(1);
+    }
 
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.UnloadScene(0);
     }
 
     public void QuitGame()
