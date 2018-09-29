@@ -136,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 1812301560724824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.75, z: 0}
-  m_LocalScale: {x: 5.2725024, y: 1, z: 1}
+  m_LocalScale: {x: 5.2725024, y: 0.65, z: 1}
   m_Children:
   - {fileID: 4872286969904038}
   - {fileID: 4707811332740310}
@@ -313,7 +313,7 @@ MonoBehaviour:
   bpm: 95
   noteSpeed: 4
   newNota: {fileID: 1159645486010240, guid: 8bbc69ff2add445358a37d7949a60d72, type: 2}
-  notePosition: {x: 9, y: -3.8, z: 0}
+  notePosition: 9
   playNote: 32
 --- !u!114 &114305696278126692
 MonoBehaviour:
