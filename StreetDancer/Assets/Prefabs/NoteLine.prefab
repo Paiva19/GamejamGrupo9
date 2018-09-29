@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteSpeed: 0
+  fimdatela: -9
 --- !u!212 &212533460799423834
 SpriteRenderer:
   m_ObjectHideFlags: 1
