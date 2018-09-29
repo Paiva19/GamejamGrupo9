@@ -12,8 +12,6 @@ public class FighterLife : MonoBehaviour {
 
     public Slider lifeBar;
 
-    private float deltaTime;
-
     public 
 	// Use this for initialization
 	void Start () {
@@ -24,12 +22,7 @@ public class FighterLife : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        deltaTime += Time.deltaTime;
-        if (deltaTime > 2)
-        {
-            getDamaged(10);
-            deltaTime = 0f;
-        }
+
     }
 
     public void getDamaged(int damage)
