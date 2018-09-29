@@ -20,7 +20,6 @@ public class FighterLife : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
     }
 
     public void getDamaged(int damage)
