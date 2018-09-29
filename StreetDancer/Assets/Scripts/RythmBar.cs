@@ -12,19 +12,14 @@ public class RythmBar : MonoBehaviour {
 
 	private float deltaTime; // tempo entre a ultima nota gerada e tempo atual
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	private void Update () {
-		deltaTime += Time.deltaTime;
-		if(deltaTime >= 60/bpm){
-			deltaTime = 0;
-			var note = GameObject.Instantiate(newNota);
-			note.GetComponent<Transform>().localPosition = GetComponent<Transform>().position + new Vector3(notePosition, 0, 0);
-			note.GetComponent<NoteMove>().noteSpeed = this.noteSpeed;
-		}
+        deltaTime += Time.deltaTime;
+	    if(deltaTime >= 60/bpm){
+	    	deltaTime = 0;
+	    	var note = GameObject.Instantiate(newNota);
+	    	note.GetComponent<Transform>().localPosition = GetComponent<Transform>().position + new Vector3(notePosition, 0, 0);
+	    	note.GetComponent<NoteMove>().noteSpeed = this.noteSpeed;
+	    }
 	}
 }

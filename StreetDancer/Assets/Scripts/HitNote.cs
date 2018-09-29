@@ -10,15 +10,11 @@ public class HitNote : MonoBehaviour
     public GameObject badArea;
 
     public GameObject player;
+    public GameObject targetPlayer;
 
     //public float distance;
-	
+
     public List<KeyCode> keyCodes;
-
-	// Use this for initialization
-	void Start () {
-
-    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,7 +29,7 @@ public class HitNote : MonoBehaviour
                 break;
             }
         }
-		if (hit && player.GetComponent<FighterStrike>().alive)
+		if (hit && player.GetComponent<FighterStrike>().alive && targetPlayer.GetComponent<FighterLife>().alive)
 		{
 			if (perfectArea.GetComponent<HitArea>().hasNoteInside)
 			{

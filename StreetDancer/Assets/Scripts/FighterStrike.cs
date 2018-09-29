@@ -15,11 +15,6 @@ public class FighterStrike : MonoBehaviour
 	void Start () {
 		comboFlow.Clear();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
 
 	public void Strike(int atk, int perfection)
 	// atk = numero do ataque utilizado, perfection: 0 = miss, 1 = bad, 2 = good, 3 = perfect
