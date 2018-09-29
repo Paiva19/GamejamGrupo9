@@ -6,6 +6,7 @@ public class FighterStrike : MonoBehaviour
 {
 	public int baseDamage; //Dano base que o golpe causa
 	public GameObject targetPlayer;
+    public bool alive = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,9 +21,11 @@ public class FighterStrike : MonoBehaviour
 	// atk = numero do ataque utilizado, perfection: 0 = miss, 1 = bad, 2 = good, 3 = perfect
 	{
         //Calcula dano do ataque e aplica no adversario
-
-        int atkDamage;
-		atkDamage = baseDamage * perfection / 3;
-		targetPlayer.GetComponent<FighterLife>().getDamaged(atkDamage);
+        if (alive)
+        {
+            int atkDamage;
+		    atkDamage = baseDamage * perfection / 3;
+		    targetPlayer.GetComponent<FighterLife>().getDamaged(atkDamage);
+        }
 	}
 }

@@ -33,7 +33,7 @@ public class HitNote : MonoBehaviour
                 break;
             }
         }
-		if (hit)
+		if (hit && player.GetComponent<FighterStrike>().alive)
 		{
 			if (perfectArea.GetComponent<HitArea>().hasNoteInside)
 			{

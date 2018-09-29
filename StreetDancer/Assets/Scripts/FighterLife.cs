@@ -35,8 +35,7 @@ public class FighterLife : MonoBehaviour {
 
     public void die()
     {
-        
-        GameObject.Destroy(GetComponent<FighterStrike>());
+        GetComponent<FighterStrike>().alive = false;
         this.GetComponent<SpriteRenderer>().color = Color.red;
     }
 }
