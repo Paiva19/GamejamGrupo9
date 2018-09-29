@@ -16,6 +16,12 @@ public class BattleController : MonoBehaviour {
     public Image p2v1;
     public Image p2v2;
 
+    public Image winner;
+
+    public Sprite p1Winner;
+    public Sprite p2Winner;
+
+
     // Update is called once per frame
     void Update () {
 		if (p1Wins > 1)
@@ -24,7 +30,9 @@ public class BattleController : MonoBehaviour {
             player1.GetComponent<FighterStrike>().enabled = false;
             player2.GetComponent<FighterLife>().enabled = false;
             player2.GetComponent<FighterStrike>().enabled = false;
-            Debug.Log("p1 Wins");
+            winner.sprite = p1Winner;
+            winner.color = Color.white;
+            //Debug.Log("p1 Wins");
         }
         else if (p2Wins > 1)
         {
@@ -32,7 +40,9 @@ public class BattleController : MonoBehaviour {
             player1.GetComponent<FighterStrike>().enabled = false;
             player2.GetComponent<FighterLife>().enabled = false;
             player2.GetComponent<FighterStrike>().enabled = false;
-            Debug.Log("p2 Wins");
+            winner.sprite = p2Winner;
+            winner.color = Color.white;
+            //Debug.Log("p2 Wins");
         }
 	}
 
