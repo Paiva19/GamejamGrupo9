@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleController : MonoBehaviour {
 
@@ -9,9 +10,14 @@ public class BattleController : MonoBehaviour {
 
     public int p1Wins = 0;
     public int p2Wins = 0;
-	
-	// Update is called once per frame
-	void Update () {
+
+    public Image p1v1;
+    public Image p1v2;
+    public Image p2v1;
+    public Image p2v2;
+
+    // Update is called once per frame
+    void Update () {
 		if (p1Wins > 1)
         {
             player1.GetComponent<FighterLife>().enabled = false;
@@ -33,13 +39,27 @@ public class BattleController : MonoBehaviour {
     public void Win(GameObject winningPlayer)
     {
         if (winningPlayer.name.Equals(player1.name)){
+            if (p1Wins == 0)
+            {
+                p1v1.color = Color.red;
+            }
+            else
+            {
+                p1v2.color = Color.red;
+            }
             p1Wins++;
-            Debug.Log("p1");
         }
         else
         {
+            if (p2Wins == 0)
+            {
+                p2v1.color = Color.red;
+            }
+            else
+            {
+                p2v2.color = Color.red;
+            }
             p2Wins++;
-            Debug.Log("p2");
         }
     }
 }
