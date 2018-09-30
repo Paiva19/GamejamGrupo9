@@ -473,12 +473,12 @@ Prefab:
     - target: {fileID: 114161897687191042, guid: f39a0937cfc384a4d98f3b79bc65208d,
         type: 2}
       propertyPath: bpm
-      value: 80
+      value: 90.57
       objectReference: {fileID: 0}
     - target: {fileID: 114646654214846682, guid: f39a0937cfc384a4d98f3b79bc65208d,
         type: 2}
       propertyPath: bpm
-      value: 85
+      value: 90.57
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f39a0937cfc384a4d98f3b79bc65208d, type: 2}
@@ -4083,12 +4083,12 @@ Prefab:
     - target: {fileID: 114355677869392020, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
         type: 2}
       propertyPath: baseDamage
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114471417605668544, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
         type: 2}
       propertyPath: baseDamage
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114493371865695242, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
         type: 2}
@@ -4108,6 +4108,30 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 2.89
       objectReference: {fileID: 0}
+    - target: {fileID: 114355677869392020, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
+        type: 2}
+      propertyPath: Hadouken
+      value: 
+      objectReference: {fileID: 1243765464913308, guid: 4cca2d2d432f12a409b1ea36b8036e97,
+        type: 2}
+    - target: {fileID: 114355677869392020, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
+        type: 2}
+      propertyPath: Music
+      value: 
+      objectReference: {fileID: 1600983736156784, guid: 43da8a92aa258744eab1c3bdb40adca0,
+        type: 2}
+    - target: {fileID: 114471417605668544, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
+        type: 2}
+      propertyPath: Hadouken
+      value: 
+      objectReference: {fileID: 1243765464913308, guid: 4cca2d2d432f12a409b1ea36b8036e97,
+        type: 2}
+    - target: {fileID: 114471417605668544, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
+        type: 2}
+      propertyPath: Music
+      value: 
+      objectReference: {fileID: 1600983736156784, guid: 43da8a92aa258744eab1c3bdb40adca0,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e, type: 2}
   m_IsPrefabAsset: 0
