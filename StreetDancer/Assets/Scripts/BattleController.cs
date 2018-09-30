@@ -17,6 +17,9 @@ public class BattleController : MonoBehaviour {
     public Image p2v1;
     public Image p2v2;
 
+    public float shakeDuration;
+    public GameObject camera;
+
     // Update is called once per frame
     void Update () {
         if (p1Wins > 1 || p2Wins > 1)
@@ -48,6 +51,7 @@ public class BattleController : MonoBehaviour {
 
     public void Win(GameObject winningPlayer)
     {
+        camera.GetComponent<CameraShake>().shakeDuration = shakeDuration;
         if (winningPlayer.name.Equals(player1.name)){
             if (p1Wins == 0)
             {
