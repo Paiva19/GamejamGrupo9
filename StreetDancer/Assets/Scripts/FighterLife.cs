@@ -19,6 +19,8 @@ public class FighterLife : MonoBehaviour {
 
     public GameObject rythmBars;
 
+    public Animator animator;
+
     private int life;
 
     public 
@@ -71,6 +73,7 @@ public class FighterLife : MonoBehaviour {
 
     public void die()
     {
+        animator.SetBool("Dead", true);
         playersController.GetComponent<BattleController>().Win(targetPlayer);
         alive = false;
         GetComponent<FighterStrike>().alive = false;
@@ -80,6 +83,7 @@ public class FighterLife : MonoBehaviour {
 
     public void revive()
     {        
+        animator.SetBool("Dead", false);
         alive = true;
         GetComponent<FighterStrike>().alive = true;
         rythmBars.GetComponent<RythmBarsController>().enable();

@@ -196,6 +196,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1319820700896464, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
     type: 2}
   m_PrefabInternal: {fileID: 2135114216}
+--- !u!95 &487191200 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95357939454660740, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2135114216}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +281,11 @@ Transform:
 --- !u!1 &951524157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1460941048581586, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2135114216}
+--- !u!95 &951524159 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95751795439156936, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
     type: 2}
   m_PrefabInternal: {fileID: 2135114216}
 --- !u!114 &1085982683 stripped
@@ -821,6 +831,16 @@ Prefab:
       propertyPath: winner
       value: 
       objectReference: {fileID: 2093544607}
+    - target: {fileID: 114493371865695242, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 951524159}
+    - target: {fileID: 114589920973045304, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 487191200}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d2cc90b23bbf6d4fa4ce1f2fa120c2e, type: 2}
   m_IsPrefabAsset: 0
