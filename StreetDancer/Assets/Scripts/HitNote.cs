@@ -51,8 +51,8 @@ public class HitNote : MonoBehaviour
 			}
 			else
 			{
-                RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector2.right, 7f);
-                if (rayHit.collider != null)
+                RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector2.right, 7f, 9);
+                if (rayHit.collider != null && !rayHit.collider.CompareTag("StartNote"))
                 {
                     player.GetComponent<FighterStrike>().Strike(hitKey, 0);
                     Destroy(rayHit.collider.gameObject);
