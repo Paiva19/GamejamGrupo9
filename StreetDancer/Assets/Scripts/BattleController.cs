@@ -22,7 +22,6 @@ public class BattleController : MonoBehaviour {
     public Sprite p1Winner;
     public Sprite p2Winner;
 
-
     // Update is called once per frame
     void Update () {
         if (p1Wins > 1 || p2Wins > 1)

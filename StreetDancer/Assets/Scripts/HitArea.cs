@@ -18,6 +18,7 @@ public class HitArea : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		if(other.CompareTag("StartNote")){return;}
 		hasNoteInside = true;
 		note = other.gameObject;
 	}

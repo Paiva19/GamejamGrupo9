@@ -13,6 +13,7 @@
           <e p="HitNote.cs" t="Include" />
           <e p="MenuScript.cs" t="Include" />
           <e p="NoteMove.cs" t="Include" />
+          <e p="OnHitStart.cs" t="Include" />
           <e p="RythmBar.cs" t="Include" />
           <e p="RythmBarsController.cs" t="Include" />
           <e p="startMusic.cs" t="Include" />
