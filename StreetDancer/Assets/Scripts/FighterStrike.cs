@@ -11,6 +11,8 @@ public class FighterStrike : MonoBehaviour
 	public List<KeyValuePair<int,int>> comboFlow = new List<KeyValuePair<int, int>>();
 	public GameObject targetPlayer;
     public GameObject hitAccuracy;
+
+    public Animator animator;
 	// Use this for initialization
 	void Start () {
 		comboFlow.Clear();
@@ -35,6 +37,10 @@ public class FighterStrike : MonoBehaviour
                     comboFlow.Clear();
                 }
                 hitAccuracy.GetComponent<AccuracyFade>().ChangeImage(perfection);
+
+                Debug.Log(atk);
+                animator.SetInteger("AttackType", atk);
+                Debug.Log(animator.GetInteger("AttackType"));
             }
             else
             {
