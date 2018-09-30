@@ -13,6 +13,9 @@ public class FighterStrike : MonoBehaviour
     public GameObject hitAccuracy;
 
     public Animator animator;
+
+    public GameObject Hadouken;
+    public GameObject Music;
 	// Use this for initialization
 	void Start () {
 		comboFlow.Clear();
@@ -24,6 +27,36 @@ public class FighterStrike : MonoBehaviour
         //Calcula dano do ataque e aplica no adversario
         if (alive)
         {
+            if (atk == 1)
+            {
+                var had = Instantiate(Hadouken);
+                had.transform.position = this.transform.position;
+                if (GetComponent<SpriteRenderer>().flipX)
+                {
+                    had.GetComponent<MoveAttack>().direction = -1;
+                    had.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                else
+                {
+                    had.GetComponent<MoveAttack>().direction = 1;
+                }
+            }
+
+            if (atk == 3)
+            {
+                var had = Instantiate(Music);
+                had.transform.position = this.transform.position;
+                if (GetComponent<SpriteRenderer>().flipX)
+                {
+                    had.GetComponent<MoveAttack>().direction = -1;
+                    had.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                else
+                {
+                    had.GetComponent<MoveAttack>().direction = 1;
+                }
+            }
+
             int atkDamage;
             if (comboFlow.Count < 7)
             {
