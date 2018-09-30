@@ -9,21 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1506254869828324}
+  m_RootGameObject: {fileID: 1803247021979388}
   m_IsPrefabAsset: 1
---- !u!1 &1506254869828324
+--- !u!1 &1803247021979388
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4319862513132600}
-  - component: {fileID: 212116761234776356}
-  - component: {fileID: 114134369629328770}
-  - component: {fileID: 50188810456282166}
-  - component: {fileID: 58099562033292456}
-  - component: {fileID: 95266329715471800}
+  - component: {fileID: 4448318248612076}
+  - component: {fileID: 212857028803016610}
+  - component: {fileID: 114031212259375132}
+  - component: {fileID: 50086051249964792}
+  - component: {fileID: 95144480497016282}
+  - component: {fileID: 61738562505202788}
   m_Layer: 0
   m_Name: NoteLine
   m_TagString: Note
@@ -31,26 +31,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4319862513132600
+--- !u!4 &4448318248612076
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506254869828324}
-  m_LocalRotation: {x: 0, y: 0, z: 0.10825962, w: 0.9941227}
+  m_GameObject: {fileID: 1803247021979388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.46, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.43}
---- !u!50 &50188810456282166
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50086051249964792
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506254869828324}
+  m_GameObject: {fileID: 1803247021979388}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -64,28 +64,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58099562033292456
-CircleCollider2D:
+--- !u!61 &61738562505202788
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506254869828324}
+  m_GameObject: {fileID: 1803247021979388}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07952544, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.33, y: 0.27}
+    newSize: {x: 0.2, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.13778594
---- !u!95 &95266329715471800
+  m_Size: {x: 0.17094916, y: 0.27}
+  m_EdgeRadius: 0
+--- !u!95 &95144480497016282
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506254869828324}
+  m_GameObject: {fileID: 1803247021979388}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cf1bc0e6de5113749a00708c4a22173c, type: 2}
@@ -97,12 +107,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114134369629328770
+--- !u!114 &114031212259375132
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506254869828324}
+  m_GameObject: {fileID: 1803247021979388}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec0692ed68ac04d86b0f0be736dfef9d, type: 3}
@@ -111,12 +121,12 @@ MonoBehaviour:
   noteSpeed: 0
   tocaNota: 32
   fimdatela: -9
---- !u!212 &212116761234776356
+--- !u!212 &212857028803016610
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506254869828324}
+  m_GameObject: {fileID: 1803247021979388}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
