@@ -10,7 +10,7 @@ public class RythmBar : MonoBehaviour {
 	public GameObject newNota; // objeto nota
 	public float notePosition = 9;
 	private float deltaTime; // tempo entre a ultima nota gerada e tempo atual
-
+	public int offset;
 	public bool first = true;
 	
 	// Update is called once per frame
@@ -38,6 +38,7 @@ public class RythmBar : MonoBehaviour {
 
 	private void CreateMusicStarter()
 	{
+		deltaTime = offset / bpm;
 		var startnote = GameObject.Instantiate(newNota);
 		startnote.tag = "StartNote";
 		startnote.layer = 9;
