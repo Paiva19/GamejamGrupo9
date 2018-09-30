@@ -15,6 +15,7 @@
           <e p="NoteMove.cs" t="Include" />
           <e p="RythmBar.cs" t="Include" />
           <e p="RythmBarsController.cs" t="Include" />
+          <e p="startMusic.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">

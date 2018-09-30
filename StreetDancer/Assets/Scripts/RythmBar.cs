@@ -9,17 +9,25 @@ public class RythmBar : MonoBehaviour {
 	public float noteSpeed = 4; // velocidde que a nota vai em direcao da caixa de hit da nota
 	public GameObject newNota; // objeto nota 
 	public float notePosition = 9;
+	public AudioSource musica;
 
 	private float deltaTime; // tempo entre a ultima nota gerada e tempo atual
 
 	// Update is called once per frame
 	private void Update () {
         deltaTime += Time.deltaTime;
-	    if(deltaTime >= 60/bpm){
-	    	deltaTime = 0;
-	    	var note = GameObject.Instantiate(newNota);
-	    	note.GetComponent<Transform>().localPosition = GetComponent<Transform>().position + new Vector3(notePosition, 0, 0);
-	    	note.GetComponent<NoteMove>().noteSpeed = this.noteSpeed;
+	    if(deltaTime >= 60/bpm)
+	    {
+		    CreateNote();
+	    	
 	    }
+	}
+	private void CreateNote()
+	{
+		deltaTime = 0;
+		var note = GameObject.Instantiate(newNota);
+		note.GetComponent<Transform>().localPosition = GetComponent<Transform>().position + new Vector3(notePosition, 0, 0);
+		note.GetComponent<NoteMove>().noteSpeed = this.noteSpeed;
+			
 	}
 }
