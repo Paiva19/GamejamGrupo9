@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class HitNote : MonoBehaviour
@@ -12,10 +13,19 @@ public class HitNote : MonoBehaviour
     public GameObject player;
     public GameObject targetPlayer;
 
+	public GameObject Toot;
     //public float distance;
 
     public List<KeyCode> keyCodes;
 	
+	private Random rnd = new Random();
+	private AudioSource[] frases;
+
+	void Start()
+	{
+		frases = Toot.GetComponents<AudioSource>();
+
+	}
 	// Update is called once per frame
 	void Update () {
         bool hit = false;
@@ -29,8 +39,23 @@ public class HitNote : MonoBehaviour
                 break;
             }
         }
+
 		if (hit && player.GetComponent<FighterStrike>().alive && targetPlayer.GetComponent<FighterLife>().alive)
 		{
+			switch (hitKey)
+			{
+				//Música
+				case 1:
+					frases[Random.Range(0, 3)].Play();
+					break;
+				case 3:
+					frases[Random.Range(4, 7)].Play();
+					break;
+				default:
+					frases[Random.Range(8,11)].Play();
+					break;
+			}
+
 			if (perfectArea.GetComponent<HitArea>().hasNoteInside)
 			{
 				//Debug.Log("PERFECT " + hitKey.ToString());

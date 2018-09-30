@@ -6,6 +6,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="AccuracyFade.cs" t="Include" />
+          <e p="BackToIdle.cs" t="Include" />
           <e p="BattleController.cs" t="Include" />
           <e p="FighterLife.cs" t="Include" />
           <e p="FighterStrike.cs" t="Include" />
